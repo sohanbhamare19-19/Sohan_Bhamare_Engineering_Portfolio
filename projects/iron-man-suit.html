@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Iron Man Suit personal engineering project by Sohan Bhamare.">
+
+    <title>
+        Iron Man Suit | Sohan Bhamare
+    </title>
+
+    <link rel="stylesheet"
+          href="../style.css">
+
+</head>
+
+
+<body>
+
+
+    <main class="project-page">
+
+
+        <!-- BACK -->
+
+        <a class="back-link"
+           href="../projects.html">
+
+            ← Back to Projects
+
+        </a>
+
+
+
+        <!-- TITLE -->
+
+        <p class="eyebrow">
+            PERSONAL PROJECT
+        </p>
+
+
+        <h1>
+            Iron Man Suit
+        </h1>
+
+
+        <p class="project-summary">
+
+            A fully functional Iron Man suit inspired by
+            the Avengers films, engineered and built as
+            a personal project in five weeks.
+
+        </p>
+
+
+
+        <!-- HERO PHOTO -->
+
+        <img class="project-hero-image zoomable-image"
+             src="../images/iron-man-hero.jpg"
+             alt="Completed Iron Man Suit personal project">
+
+
+
+        <!-- OVERVIEW -->
+
+        <section class="project-content-section">
+
+
+            <p class="eyebrow">
+                OVERVIEW
+            </p>
+
+
+            <h2>
+                Turning a Movie Concept into a Physical Build
+            </h2>
+
+
+            <p>
+
+                This personal project challenged me to take
+                the concept of the Iron Man suit and turn it
+                into a functional physical build.
+
+            </p>
+
+
+            <p>
+
+                The suit was designed, fabricated, assembled,
+                tested, and improved over a five-week
+                development period.
+
+            </p>
+
+
+        </section>
+
+
+
+        <!-- MY ROLE -->
+
+        <section class="project-content-section">
+
+
+            <p class="eyebrow">
+                MY ROLE
+            </p>
+
+
+            <h2>
+                Independent Design & Build
+            </h2>
+
+
+            <p>
+
+                I independently engineered and built the
+                suit from the initial concept through the
+                completed project.
+
+            </p>
+
+
+            <p>
+
+                The project required solving design,
+                fabrication, assembly, and integration
+                challenges while working toward a complete
+                functioning suit.
+
+            </p>
+
+
+        </section>
+
+
+
+        <!-- RESULT -->
+
+        <section class="project-content-section">
+
+
+            <p class="eyebrow">
+                RESULT
+            </p>
+
+
+            <h2>
+                Completed in Five Weeks
+            </h2>
+
+
+            <div class="result-grid">
+
+
+                <div class="result-card">
+
+                    <span class="result-number">
+                        5 Weeks
+                    </span>
+
+                    <span class="result-label">
+                        Design & Build Time
+                    </span>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span class="result-number">
+                        1
+                    </span>
+
+                    <span class="result-label">
+                        Completed Suit
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- SECOND PHOTO -->
+
+        <section class="project-content-section">
+
+
+            <p class="eyebrow">
+                PROJECT PHOTO
+            </p>
+
+
+            <h2>
+                Completed Build
+            </h2>
+
+
+            <figure class="project-figure">
+
+
+                <img class="zoomable-image"
+                     src="../images/iron-man-gallery-1.jpg"
+                     alt="Iron Man Suit project photo">
+
+
+                <figcaption>
+
+                    Completed Iron Man Suit.
+                    Click the image to enlarge.
+
+                </figcaption>
+
+
+            </figure>
+
+
+        </section>
+
+
+
+        <!-- DEMONSTRATION VIDEO -->
+
+        <section class="project-content-section">
+
+
+            <p class="eyebrow">
+                DEMONSTRATION
+            </p>
+
+
+            <h2>
+                Iron Man Suit in Operation
+            </h2>
+
+
+            <p>
+
+                A demonstration of the completed Iron Man
+                Suit after the five-week design and build process.
+
+            </p>
+
+
+            <div class="iron-man-video-container">
+
+
+                <video class="iron-man-video"
+                       controls
+                       preload="metadata"
+                       playsinline>
+
+
+                    <source
+                        src="../videos/iron-man-demonstration.mp4"
+                        type="video/mp4">
+
+
+                    Your browser does not support video playback.
+
+
+                </video>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- BOTTOM NAVIGATION -->
+
+        <div class="project-bottom-navigation">
+
+
+            <a class="button button-secondary"
+               href="../index.html#projects">
+
+                ← Featured Projects
+
+            </a>
+
+
+            <a class="button button-primary"
+               href="../projects.html">
+
+                View All Projects →
+
+            </a>
+
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- FULL SCREEN IMAGE VIEWER -->
+
+    <div class="image-modal"
+         id="imageModal"
+         aria-hidden="true">
+
+
+        <button class="image-modal-close"
+                id="imageModalClose"
+                aria-label="Close image">
+
+            ×
+
+        </button>
+
+
+        <img class="image-modal-content"
+             id="imageModalContent"
+             src=""
+             alt="Enlarged project image">
+
+
+    </div>
+
+
+
+    <!-- CLICK TO ENLARGE -->
+
+    <script>
+
+        const zoomImages =
+            document.querySelectorAll(".zoomable-image");
+
+        const imageModal =
+            document.getElementById("imageModal");
+
+        const imageModalContent =
+            document.getElementById("imageModalContent");
+
+        const imageModalClose =
+            document.getElementById("imageModalClose");
+
+
+        zoomImages.forEach(image => {
+
+            image.addEventListener("click", () => {
+
+                imageModalContent.src = image.src;
+
+                imageModal.classList.add("active");
+
+                imageModal.setAttribute(
+                    "aria-hidden",
+                    "false"
+                );
+
+            });
+
+        });
+
+
+        function closeImageModal() {
+
+            imageModal.classList.remove("active");
+
+            imageModal.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
+            imageModalContent.src = "";
+
+        }
+
+
+        imageModalClose.addEventListener(
+            "click",
+            closeImageModal
+        );
+
+
+        imageModal.addEventListener(
+            "click",
+            event => {
+
+                if (event.target === imageModal) {
+
+                    closeImageModal();
+
+                }
+
+            }
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            event => {
+
+                if (event.key === "Escape") {
+
+                    closeImageModal();
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>
