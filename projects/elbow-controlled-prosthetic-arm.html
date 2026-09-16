@@ -1,43 +1,435 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Motorized Prosthetic Arm — Elbow Controlled | Sohan Bhamare</title>
-    <link rel="stylesheet" href="../style.css">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Elbow-Controlled Prosthetic Arm personal engineering project by Sohan Bhamare.">
+
+    <title>
+        Elbow-Controlled Prosthetic Arm | Sohan Bhamare
+    </title>
+
+    <link rel="stylesheet"
+          href="../style.css">
+
 </head>
+
+
 <body>
+
+
     <main class="project-page">
-        <a class="back-link" href="../projects.html">← Back to All Projects</a>
-        <p class="eyebrow">PERSONAL PROJECT</p>
-        <h1>Motorized Prosthetic Arm — Elbow Controlled</h1>
-        <p class="project-summary">An earlier motorized prosthetic-arm project controlled through elbow movement.</p>
 
-        <img class="project-hero-image" src="../images/elbow-controlled-prosthetic-arm.svg" alt="Temporary placeholder image for Motorized Prosthetic Arm — Elbow Controlled">
 
-        <div class="project-detail-grid">
-            <section class="detail-card">
-                <h2>Project Highlights</h2>
-                <ul>
-                    <li>Built an earlier motorized prosthetic-arm concept controlled through elbow movement.</li>
-<li>Explored mechanical actuation and accessible user control.</li>
-<li>This project helps show the progression of your prosthetics work over time.</li>
-                </ul>
-            </section>
+        <!-- BACK -->
 
-            <section class="detail-card">
-                <h2>Project Story</h2>
-                <p>
-                    This is the starter version of the project page. Once you send your real
-                    photos and more detail, we can expand this into your design process,
-                    testing, challenges, results, CAD, electronics, and gallery.
-                </p>
-            </section>
+        <a class="back-link"
+           href="../projects.html">
+
+            ← Back to Projects
+
+        </a>
+
+
+
+        <!-- TITLE -->
+
+        <p class="eyebrow">
+            PERSONAL PROJECT
+        </p>
+
+
+        <h1>
+            Elbow-Controlled Prosthetic Arm
+        </h1>
+
+
+        <p class="project-summary">
+
+            A prosthetic arm designed to move in sync
+            with simple elbow movements using Arduino
+            control, a servo motor, and a potentiometer.
+
+        </p>
+
+
+
+        <!-- HERO PHOTO -->
+
+        <img class="project-hero-image zoomable-image"
+             src="../images/elbow-prosthetic-arm-hero.jpg"
+             alt="Elbow-Controlled Prosthetic Arm project">
+
+
+
+        <!-- OVERVIEW -->
+
+        <section class="project-content-section">
+
+
+            <p class="eyebrow">
+                OVERVIEW
+            </p>
+
+
+            <h2>
+                Controlling a Prosthetic Arm with Elbow Movement
+            </h2>
+
+
+            <p>
+
+                The goal of this personal project was to
+                design and build a prosthetic arm that could
+                respond directly to simple elbow movements.
+
+            </p>
+
+
+            <p>
+
+                As the user moved their elbow, the control
+                system translated that movement into a
+                corresponding motion of the prosthetic arm.
+
+            </p>
+
+
+        </section>
+
+
+
+        <!-- MY ROLE -->
+
+        <section class="project-content-section">
+
+
+            <p class="eyebrow">
+                MY ROLE
+            </p>
+
+
+            <h2>
+                Independent Design & Build
+            </h2>
+
+
+            <p>
+
+                I designed, assembled, programmed, and tested
+                the prosthetic arm as an independent project.
+
+            </p>
+
+
+            <p>
+
+                I used Arduino programming, a potentiometer,
+                and a servo motor to create a simple control
+                system that synchronized the prosthetic arm's
+                movement with the user's elbow motion.
+
+            </p>
+
+
+        </section>
+
+
+
+        <!-- CONTROL SYSTEM -->
+
+        <section class="project-content-section">
+
+
+            <p class="eyebrow">
+                CONTROL SYSTEM
+            </p>
+
+
+            <h2>
+                Elbow Movement → Arduino → Servo
+            </h2>
+
+
+            <p>
+
+                The potentiometer provided the input to the
+                Arduino, which used the measured position
+                to determine how the servo motor should move.
+
+            </p>
+
+
+            <p>
+
+                The servo then actuated the prosthetic arm,
+                allowing its motion to follow changes in
+                elbow position.
+
+            </p>
+
+
+
+            <div class="pid-grid">
+
+
+                <div class="technical-card">
+
+                    <span class="technical-symbol">
+                        1
+                    </span>
+
+                    <h3>
+                        Input
+                    </h3>
+
+                    <p>
+                        Elbow movement changes the
+                        potentiometer input.
+                    </p>
+
+                </div>
+
+
+                <div class="technical-card">
+
+                    <span class="technical-symbol">
+                        2
+                    </span>
+
+                    <h3>
+                        Processing
+                    </h3>
+
+                    <p>
+                        Arduino code interprets the
+                        input position.
+                    </p>
+
+                </div>
+
+
+                <div class="technical-card">
+
+                    <span class="technical-symbol">
+                        3
+                    </span>
+
+                    <h3>
+                        Motion
+                    </h3>
+
+                    <p>
+                        The servo moves the prosthetic
+                        arm in response.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- DEMONSTRATION -->
+
+        <section class="project-content-section">
+
+
+            <p class="eyebrow">
+                DEMONSTRATION
+            </p>
+
+
+            <h2>
+                Prosthetic Arm in Operation
+            </h2>
+
+
+            <p>
+
+                The demonstration shows the prosthetic
+                arm responding to elbow movement through
+                the Arduino-controlled servo system.
+
+            </p>
+
+
+            <div class="elbow-arm-video-container">
+
+
+                <video class="elbow-arm-video"
+                       controls
+                       preload="metadata"
+                       playsinline>
+
+
+                    <source
+                        src="../videos/elbow-prosthetic-arm-demonstration.mp4"
+                        type="video/mp4">
+
+
+                    Your browser does not support video playback.
+
+
+                </video>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- BOTTOM NAVIGATION -->
+
+        <div class="project-bottom-navigation">
+
+
+            <a class="button button-secondary"
+               href="../index.html#projects">
+
+                ← Featured Projects
+
+            </a>
+
+
+            <a class="button button-primary"
+               href="../projects.html">
+
+                View All Projects →
+
+            </a>
+
+
         </div>
 
-        <div class="gallery-placeholder">
-            Project gallery coming next — photos, CAD screenshots, test data, and videos.
-        </div>
+
     </main>
+
+
+
+    <!-- IMAGE VIEWER -->
+
+    <div class="image-modal"
+         id="imageModal"
+         aria-hidden="true">
+
+
+        <button class="image-modal-close"
+                id="imageModalClose"
+                aria-label="Close image">
+
+            ×
+
+        </button>
+
+
+        <img class="image-modal-content"
+             id="imageModalContent"
+             src=""
+             alt="Enlarged project image">
+
+
+    </div>
+
+
+
+    <!-- CLICK TO ENLARGE -->
+
+    <script>
+
+        const zoomImages =
+            document.querySelectorAll(".zoomable-image");
+
+        const imageModal =
+            document.getElementById("imageModal");
+
+        const imageModalContent =
+            document.getElementById("imageModalContent");
+
+        const imageModalClose =
+            document.getElementById("imageModalClose");
+
+
+        zoomImages.forEach(image => {
+
+            image.addEventListener("click", () => {
+
+                imageModalContent.src = image.src;
+
+                imageModal.classList.add("active");
+
+                imageModal.setAttribute(
+                    "aria-hidden",
+                    "false"
+                );
+
+            });
+
+        });
+
+
+        function closeImageModal() {
+
+            imageModal.classList.remove("active");
+
+            imageModal.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
+            imageModalContent.src = "";
+
+        }
+
+
+        imageModalClose.addEventListener(
+            "click",
+            closeImageModal
+        );
+
+
+        imageModal.addEventListener(
+            "click",
+            event => {
+
+                if (event.target === imageModal) {
+
+                    closeImageModal();
+
+                }
+
+            }
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            event => {
+
+                if (event.key === "Escape") {
+
+                    closeImageModal();
+
+                }
+
+            }
+        );
+
+    </script>
+
+
 </body>
+
 </html>
