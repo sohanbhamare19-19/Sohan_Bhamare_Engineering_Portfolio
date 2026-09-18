@@ -1,43 +1,545 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prosthetic Hand Controlled by Finger Movements | Sohan Bhamare</title>
-    <link rel="stylesheet" href="../style.css">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Finger-Controlled Prosthetic Hand personal engineering project by Sohan Bhamare.">
+
+    <title>
+        Finger-Controlled Prosthetic Hand | Sohan Bhamare
+    </title>
+
+    <link rel="stylesheet"
+          href="../style.css">
+
 </head>
+
+
 <body>
+
+
     <main class="project-page">
-        <a class="back-link" href="../projects.html">← Back to All Projects</a>
-        <p class="eyebrow">PERSONAL PROJECT</p>
-        <h1>Prosthetic Hand Controlled by Finger Movements</h1>
-        <p class="project-summary">A prosthetic-hand project designed to respond to the user&#x27;s finger movements.</p>
 
-        <img class="project-hero-image" src="../images/finger-controlled-prosthetic-hand.svg" alt="Temporary placeholder image for Prosthetic Hand Controlled by Finger Movements">
 
-        <div class="project-detail-grid">
-            <section class="detail-card">
-                <h2>Project Highlights</h2>
-                <ul>
-                    <li>Developed a motorized prosthetic-hand concept controlled by finger movement.</li>
-<li>Integrated mechanical movement with sensing/control concepts.</li>
-<li>The full page can document the mechanism, electronics, control logic, and testing.</li>
-                </ul>
-            </section>
+        <!-- BACK -->
 
-            <section class="detail-card">
-                <h2>Project Story</h2>
-                <p>
-                    This is the starter version of the project page. Once you send your real
-                    photos and more detail, we can expand this into your design process,
-                    testing, challenges, results, CAD, electronics, and gallery.
-                </p>
-            </section>
+        <a class="back-link"
+           href="../projects.html">
+
+            ← Back to Projects
+
+        </a>
+
+
+
+        <!-- TITLE -->
+
+        <p class="eyebrow">
+            PERSONAL PROJECT
+        </p>
+
+
+        <h1>
+            Finger-Controlled Prosthetic Hand
+        </h1>
+
+
+        <p class="project-summary">
+
+            A 3D-printed prosthetic hand powered by five
+            servo motors and controlled through camera-based
+            finger tracking.
+
+        </p>
+
+
+
+        <!-- HERO PHOTO -->
+
+        <img class="project-hero-image zoomable-image"
+             src="../images/finger-prosthetic-hand-hero.jpg"
+             alt="Finger-Controlled Prosthetic Hand project">
+
+
+
+        <!-- OVERVIEW -->
+
+        <section class="project-content-section">
+
+
+            <p class="eyebrow">
+                OVERVIEW
+            </p>
+
+
+            <h2>
+                Controlling a Prosthetic Hand with Finger Movement
+            </h2>
+
+
+            <p>
+
+                The goal of this project was to create a
+                low-cost prosthetic hand that could reproduce
+                finger movement using camera-based tracking
+                and servo motor control.
+
+            </p>
+
+
+            <p>
+
+                The hand was 3D printed and powered by five
+                servo motors, with each servo controlling
+                movement within the prosthetic hand.
+
+            </p>
+
+
+        </section>
+
+
+
+        <!-- MY ROLE -->
+
+        <section class="project-content-section">
+
+
+            <p class="eyebrow">
+                MY ROLE
+            </p>
+
+
+            <h2>
+                Independent Design & Build
+            </h2>
+
+
+            <p>
+
+                I designed, assembled, programmed, and tested
+                the system as an independent project.
+
+            </p>
+
+
+            <p>
+
+                I integrated the 3D-printed hand, five servo
+                motors, camera-based finger tracking, and
+                Arduino control into one working system.
+
+            </p>
+
+
+        </section>
+
+
+
+        <!-- CONTROL SYSTEM -->
+
+        <section class="project-content-section">
+
+
+            <p class="eyebrow">
+                CONTROL SYSTEM
+            </p>
+
+
+            <h2>
+                Finger Position → Servo Angle
+            </h2>
+
+
+            <p>
+
+                The camera tracks the movement of my fingers
+                and converts that movement into a position
+                value.
+
+            </p>
+
+
+            <p>
+
+                That position acts like a virtual
+                potentiometer. As my finger position changes,
+                the Arduino maps the input to a corresponding
+                servo angle.
+
+            </p>
+
+
+            <p>
+
+                The five servo motors then move the prosthetic
+                fingers to follow the motion of my hand.
+
+            </p>
+
+
+
+            <div class="finger-control-grid">
+
+
+                <div class="technical-card">
+
+                    <span class="technical-symbol">
+                        1
+                    </span>
+
+                    <h3>
+                        Camera Tracking
+                    </h3>
+
+                    <p>
+
+                        The camera detects the movement
+                        and position of the user's fingers.
+
+                    </p>
+
+                </div>
+
+
+                <div class="technical-card">
+
+                    <span class="technical-symbol">
+                        2
+                    </span>
+
+                    <h3>
+                        Position Mapping
+                    </h3>
+
+                    <p>
+
+                        Finger movement acts like a virtual
+                        potentiometer for the control system.
+
+                    </p>
+
+                </div>
+
+
+                <div class="technical-card">
+
+                    <span class="technical-symbol">
+                        3
+                    </span>
+
+                    <h3>
+                        Arduino Control
+                    </h3>
+
+                    <p>
+
+                        Arduino programming maps the input
+                        position to servo angles.
+
+                    </p>
+
+                </div>
+
+
+                <div class="technical-card">
+
+                    <span class="technical-symbol">
+                        4
+                    </span>
+
+                    <h3>
+                        Five Servos
+                    </h3>
+
+                    <p>
+
+                        Five servo motors actuate the
+                        prosthetic hand.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- RESULT -->
+
+        <section class="project-content-section">
+
+
+            <p class="eyebrow">
+                RESULT
+            </p>
+
+
+            <h2>
+                Functional Prototype in One Week
+            </h2>
+
+
+            <p>
+
+                The completed prototype demonstrated that
+                camera-based finger tracking could be
+                combined with Arduino control and servo
+                actuation to reproduce finger movement
+                in a 3D-printed prosthetic hand.
+
+            </p>
+
+
+            <div class="result-grid">
+
+
+                <div class="result-card">
+
+                    <span class="result-number">
+                        5
+                    </span>
+
+                    <span class="result-label">
+                        Servo Motors
+                    </span>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span class="result-number">
+                        1 Week
+                    </span>
+
+                    <span class="result-label">
+                        Build Time
+                    </span>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span class="result-number">
+                        3D
+                    </span>
+
+                    <span class="result-label">
+                        Printed Hand
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- DEMONSTRATION -->
+
+        <section class="project-content-section">
+
+
+            <p class="eyebrow">
+                DEMONSTRATION
+            </p>
+
+
+            <h2>
+                Finger-Controlled Prosthetic Hand in Operation
+            </h2>
+
+
+            <p>
+
+                The demonstration shows the prosthetic hand
+                responding as finger movement is tracked and
+                translated into servo motion.
+
+            </p>
+
+
+            <div class="finger-hand-video-container">
+
+
+                <video class="finger-hand-video"
+                       controls
+                       preload="metadata"
+                       playsinline>
+
+
+                    <source
+                        src="../videos/finger-prosthetic-hand-demonstration.mp4"
+                        type="video/mp4">
+
+
+                    Your browser does not support video playback.
+
+
+                </video>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- BOTTOM NAVIGATION -->
+
+        <div class="project-bottom-navigation">
+
+
+            <a class="button button-secondary"
+               href="../index.html#projects">
+
+                ← Featured Projects
+
+            </a>
+
+
+            <a class="button button-primary"
+               href="../projects.html">
+
+                View All Projects →
+
+            </a>
+
+
         </div>
 
-        <div class="gallery-placeholder">
-            Project gallery coming next — photos, CAD screenshots, test data, and videos.
-        </div>
+
     </main>
+
+
+
+    <!-- FULL SCREEN IMAGE VIEWER -->
+
+    <div class="image-modal"
+         id="imageModal"
+         aria-hidden="true">
+
+
+        <button class="image-modal-close"
+                id="imageModalClose"
+                aria-label="Close image">
+
+            ×
+
+        </button>
+
+
+        <img class="image-modal-content"
+             id="imageModalContent"
+             src=""
+             alt="Enlarged project image">
+
+
+    </div>
+
+
+
+    <!-- CLICK TO ENLARGE -->
+
+    <script>
+
+        const zoomImages =
+            document.querySelectorAll(".zoomable-image");
+
+        const imageModal =
+            document.getElementById("imageModal");
+
+        const imageModalContent =
+            document.getElementById("imageModalContent");
+
+        const imageModalClose =
+            document.getElementById("imageModalClose");
+
+
+        zoomImages.forEach(image => {
+
+            image.addEventListener("click", () => {
+
+                imageModalContent.src = image.src;
+
+                imageModal.classList.add("active");
+
+                imageModal.setAttribute(
+                    "aria-hidden",
+                    "false"
+                );
+
+            });
+
+        });
+
+
+        function closeImageModal() {
+
+            imageModal.classList.remove("active");
+
+            imageModal.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
+            imageModalContent.src = "";
+
+        }
+
+
+        imageModalClose.addEventListener(
+            "click",
+            closeImageModal
+        );
+
+
+        imageModal.addEventListener(
+            "click",
+            event => {
+
+                if (event.target === imageModal) {
+
+                    closeImageModal();
+
+                }
+
+            }
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            event => {
+
+                if (event.key === "Escape") {
+
+                    closeImageModal();
+
+                }
+
+            }
+        );
+
+    </script>
+
+
 </body>
+
 </html>
