@@ -1,43 +1,788 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eye-Controlled Prosthetic Arm | Sohan Bhamare</title>
-    <link rel="stylesheet" href="../style.css">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Eye-Controlled Prosthetic Arm personal engineering project by Sohan Bhamare.">
+
+    <title>
+        Eye-Controlled Prosthetic Arm | Sohan Bhamare
+    </title>
+
+    <link rel="stylesheet"
+          href="../style.css">
+
+
+    <!-- =========================================
+         IMAGE EXTENSION FALLBACK
+         ========================================= -->
+
+    <script>
+
+        function tryImageExtension(image) {
+
+            const extensions = [
+                ".jpg",
+                ".JPG",
+                ".jpeg",
+                ".JPEG",
+                ".png",
+                ".PNG",
+                ".webp",
+                ".WEBP"
+            ];
+
+
+            const base =
+                image.getAttribute(
+                    "data-image-base"
+                );
+
+
+            let tried =
+                (
+                    image.getAttribute(
+                        "data-tried-extensions"
+                    ) || ""
+                )
+                .split("|")
+                .filter(Boolean);
+
+
+            const currentSrc =
+                image.getAttribute("src") || "";
+
+
+            const currentMatch =
+                currentSrc.match(
+                    /(\.[^./?#]+)(?:[?#].*)?$/
+                );
+
+
+            if (
+                currentMatch &&
+                !tried.includes(currentMatch[1])
+            ) {
+
+                tried.push(currentMatch[1]);
+
+            }
+
+
+            const nextExtension =
+                extensions.find(
+                    extension =>
+                        !tried.includes(extension)
+                );
+
+
+            if (nextExtension) {
+
+                tried.push(nextExtension);
+
+
+                image.setAttribute(
+                    "data-tried-extensions",
+                    tried.join("|")
+                );
+
+
+                image.src =
+                    base + nextExtension;
+
+            }
+
+            else {
+
+                image.onerror = null;
+
+            }
+
+        }
+
+    </script>
+
 </head>
+
+
 <body>
+
+
     <main class="project-page">
-        <a class="back-link" href="../projects.html">← Back to All Projects</a>
-        <p class="eyebrow">PERSONAL PROJECT</p>
-        <h1>Eye-Controlled Prosthetic Arm</h1>
-        <p class="project-summary">A motorized prosthetic arm concept controlled using eye movement.</p>
 
-        <img class="project-hero-image" src="../images/eye-controlled-prosthetic-arm.svg" alt="Temporary placeholder image for Eye-Controlled Prosthetic Arm">
 
-        <div class="project-detail-grid">
-            <section class="detail-card">
-                <h2>Project Highlights</h2>
-                <ul>
-                    <li>Developed a motorized prosthetic-arm concept controlled by eye movement.</li>
-<li>Combined mechanical actuation with an alternative human-machine control approach.</li>
-<li>The final page can show the mechanism, control system, electronics, and testing.</li>
-                </ul>
-            </section>
+        <!-- BACK -->
 
-            <section class="detail-card">
-                <h2>Project Story</h2>
-                <p>
-                    This is the starter version of the project page. Once you send your real
-                    photos and more detail, we can expand this into your design process,
-                    testing, challenges, results, CAD, electronics, and gallery.
-                </p>
-            </section>
+        <a class="back-link"
+           href="../projects.html">
+
+            ← Back to Projects
+
+        </a>
+
+
+
+        <!-- TITLE -->
+
+        <p class="eyebrow">
+            PERSONAL PROJECT
+        </p>
+
+
+        <h1>
+            Eye-Controlled Prosthetic Arm
+        </h1>
+
+
+        <p class="project-summary">
+
+            A low-cost prosthetic arm prototype designed
+            to provide hands-free movement through
+            eye-based control using Python, Arduino,
+            C++, servo motors, and 3D-printed components.
+
+        </p>
+
+
+
+        <!-- HERO -->
+
+        <img class="project-hero-image zoomable-image"
+             src="../images/eye-prosthetic-arm-hero.jpg"
+             data-image-base="../images/eye-prosthetic-arm-hero"
+             onerror="tryImageExtension(this)"
+             alt="Eye-Controlled Prosthetic Arm project">
+
+
+
+        <!-- OVERVIEW -->
+
+        <section class="project-content-section">
+
+            <p class="eyebrow">
+                OVERVIEW
+            </p>
+
+            <h2>
+                Hands-Free Prosthetic Arm Control
+            </h2>
+
+            <p>
+
+                The goal of this project was to explore
+                a hands-free method of controlling a
+                prosthetic arm for individuals with
+                limited limb movement, including people
+                affected by ALS.
+
+            </p>
+
+            <p>
+
+                Instead of requiring direct hand or arm
+                movement, the system uses eye movement
+                as the user's control input. That input
+                is processed by software and converted
+                into commands that control the prosthetic arm.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- MY ROLE -->
+
+        <section class="project-content-section">
+
+            <p class="eyebrow">
+                MY ROLE
+            </p>
+
+            <h2>
+                Independent Design, Programming & Build
+            </h2>
+
+            <p>
+
+                I independently designed, built,
+                programmed, and tested the complete
+                prosthetic arm prototype.
+
+            </p>
+
+            <p>
+
+                The project required integration of
+                Python, Arduino, C++, servo motors,
+                electronic components, and 3D-printed
+                mechanical parts into one functioning system.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- CONTROL SYSTEM -->
+
+        <section class="project-content-section">
+
+            <p class="eyebrow">
+                CONTROL SYSTEM
+            </p>
+
+            <h2>
+                Eye Movement → Software → Arm Motion
+            </h2>
+
+            <p>
+
+                Eye movement provides the hands-free
+                control input to the system. Software
+                interprets the user's eye position and
+                converts it into commands that can be
+                sent to the prosthetic arm.
+
+            </p>
+
+            <p>
+
+                The Arduino then controls the servo motors
+                responsible for producing the physical
+                movement of the arm.
+
+            </p>
+
+
+            <div class="eye-control-grid">
+
+
+                <div class="technical-card">
+
+                    <span class="technical-symbol">
+                        1
+                    </span>
+
+                    <h3>
+                        Eye Input
+                    </h3>
+
+                    <p>
+
+                        Eye movement provides the
+                        hands-free control input.
+
+                    </p>
+
+                </div>
+
+
+                <div class="technical-card">
+
+                    <span class="technical-symbol">
+                        2
+                    </span>
+
+                    <h3>
+                        Python
+                    </h3>
+
+                    <p>
+
+                        Python processes the eye-based
+                        input and determines the user's
+                        intended command.
+
+                    </p>
+
+                </div>
+
+
+                <div class="technical-card">
+
+                    <span class="technical-symbol">
+                        3
+                    </span>
+
+                    <h3>
+                        Arduino + C++
+                    </h3>
+
+                    <p>
+
+                        The Arduino receives the control
+                        information and converts it into
+                        servo commands.
+
+                    </p>
+
+                </div>
+
+
+                <div class="technical-card">
+
+                    <span class="technical-symbol">
+                        4
+                    </span>
+
+                    <h3>
+                        Servo Motion
+                    </h3>
+
+                    <p>
+
+                        Servo motors actuate the
+                        prosthetic arm in response
+                        to the user's commands.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- COST -->
+
+        <section class="project-content-section">
+
+            <p class="eyebrow">
+                COST-FOCUSED DESIGN
+            </p>
+
+            <h2>
+                Exploring a More Affordable Approach
+            </h2>
+
+            <p>
+
+                One of the main objectives of the project
+                was to investigate whether a functional
+                prosthetic prototype could be developed
+                at a significantly lower cost than many
+                existing prosthetic systems.
+
+            </p>
+
+            <p>
+
+                The prototype cost approximately $154
+                to build, excluding the computer and
+                3D printer that I already had available.
+
+            </p>
+
+            <p>
+
+                I estimate that a more refined version
+                with additional hardware, increased
+                durability, and further development would
+                require approximately $600 in components.
+
+            </p>
+
+
+            <div class="result-grid">
+
+
+                <div class="result-card">
+
+                    <span class="result-number">
+                        $154
+                    </span>
+
+                    <span class="result-label">
+                        Prototype Build Cost
+                    </span>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span class="result-number">
+                        ~$600
+                    </span>
+
+                    <span class="result-label">
+                        Estimated Refined Build
+                    </span>
+
+                </div>
+
+
+                <div class="result-card">
+
+                    <span class="result-number">
+                        3
+                    </span>
+
+                    <span class="result-label">
+                        Programming Technologies
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+             PHOTO GALLERY
+             LONG PHOTO FIRST
+             BLINKING PHOTO SECOND
+             ========================================= -->
+
+        <section class="project-content-section">
+
+            <p class="eyebrow">
+                PHOTO GALLERY
+            </p>
+
+            <h2>
+                Development & Final Prototype
+            </h2>
+
+
+            <div class="eye-arm-gallery">
+
+
+                <!-- LONG VERTICAL PHOTO FIRST -->
+
+                <img class="zoomable-image eye-arm-long-image"
+                     src="../images/eye-prosthetic-arm-gallery-2.jpg"
+                     data-image-base="../images/eye-prosthetic-arm-gallery-2"
+                     onerror="tryImageExtension(this)"
+                     alt="Eye-Controlled Prosthetic Arm completed prototype">
+
+
+                <!-- BLINKING GUI PHOTO SECOND -->
+
+                <img class="zoomable-image eye-arm-gallery-image"
+                     src="../images/eye-prosthetic-arm-gallery-1.jpg"
+                     data-image-base="../images/eye-prosthetic-arm-gallery-1"
+                     onerror="tryImageExtension(this)"
+                     alt="Eye-Control GUI detecting blinking">
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- GUI VIDEO -->
+
+        <section class="project-content-section">
+
+            <p class="eyebrow">
+                SOFTWARE
+            </p>
+
+            <h2>
+                Eye-Control GUI
+            </h2>
+
+            <p>
+
+                This video explains how the graphical
+                user interface works and how eye movement
+                is interpreted by the software before
+                commands are sent to the prosthetic arm.
+
+            </p>
+
+
+            <div class="eye-arm-video-container">
+
+                <video class="eye-arm-video"
+                       controls
+                       preload="metadata"
+                       playsinline>
+
+                    <source
+                        src="../videos/eye-prosthetic-arm-gui.mp4"
+                        type="video/mp4">
+
+                    <source
+                        src="../videos/eye-prosthetic-arm-gui.MP4"
+                        type="video/mp4">
+
+                    <source
+                        src="../videos/eye-prosthetic-arm-gui.mov"
+                        type="video/quicktime">
+
+                    <source
+                        src="../videos/eye-prosthetic-arm-gui.MOV"
+                        type="video/quicktime">
+
+                    Your browser does not support video playback.
+
+                </video>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- DEMONSTRATION VIDEO -->
+
+        <section class="project-content-section">
+
+            <p class="eyebrow">
+                DEMONSTRATION
+            </p>
+
+            <h2>
+                Eye-Controlled Prosthetic Arm in Operation
+            </h2>
+
+            <p>
+
+                The demonstration shows the completed
+                prototype responding to eye-based commands
+                and translating those commands into
+                servo-driven arm movement.
+
+            </p>
+
+
+            <div class="eye-arm-video-container">
+
+                <video class="eye-arm-video"
+                       controls
+                       preload="metadata"
+                       playsinline>
+
+                    <source
+                        src="../videos/eye-prosthetic-arm-demonstration.mp4"
+                        type="video/mp4">
+
+                    <source
+                        src="../videos/eye-prosthetic-arm-demonstration.MP4"
+                        type="video/mp4">
+
+                    <source
+                        src="../videos/eye-prosthetic-arm-demonstration.mov"
+                        type="video/quicktime">
+
+                    <source
+                        src="../videos/eye-prosthetic-arm-demonstration.MOV"
+                        type="video/quicktime">
+
+                    Your browser does not support video playback.
+
+                </video>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- RESULT -->
+
+        <section class="project-content-section">
+
+            <p class="eyebrow">
+                RESULT
+            </p>
+
+            <h2>
+                Functional Hands-Free Prototype
+            </h2>
+
+            <p>
+
+                The completed prototype demonstrated that
+                eye-based input could be integrated with
+                software processing, Arduino control,
+                servo actuation, and 3D-printed components
+                to produce hands-free prosthetic arm movement.
+
+            </p>
+
+            <p>
+
+                The project also allowed me to explore
+                how accessible electronics and additive
+                manufacturing could be combined to develop
+                lower-cost assistive technology concepts.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- BOTTOM NAVIGATION -->
+
+        <div class="project-bottom-navigation">
+
+            <a class="button button-secondary"
+               href="../index.html#projects">
+
+                ← Featured Projects
+
+            </a>
+
+            <a class="button button-primary"
+               href="../projects.html">
+
+                View All Projects →
+
+            </a>
+
         </div>
 
-        <div class="gallery-placeholder">
-            Project gallery coming next — photos, CAD screenshots, test data, and videos.
-        </div>
+
     </main>
+
+
+
+    <!-- IMAGE MODAL -->
+
+    <div class="image-modal"
+         id="imageModal"
+         aria-hidden="true">
+
+        <button class="image-modal-close"
+                id="imageModalClose"
+                aria-label="Close image">
+
+            ×
+
+        </button>
+
+        <img class="image-modal-content"
+             id="imageModalContent"
+             src=""
+             alt="Enlarged project image">
+
+    </div>
+
+
+
+    <!-- CLICK TO ENLARGE -->
+
+    <script>
+
+        const zoomImages =
+            document.querySelectorAll(
+                ".zoomable-image"
+            );
+
+        const imageModal =
+            document.getElementById(
+                "imageModal"
+            );
+
+        const imageModalContent =
+            document.getElementById(
+                "imageModalContent"
+            );
+
+        const imageModalClose =
+            document.getElementById(
+                "imageModalClose"
+            );
+
+
+        zoomImages.forEach(image => {
+
+            image.addEventListener(
+                "click",
+                () => {
+
+                    imageModalContent.src =
+                        image.src;
+
+                    imageModal.classList.add(
+                        "active"
+                    );
+
+                    imageModal.setAttribute(
+                        "aria-hidden",
+                        "false"
+                    );
+
+                }
+            );
+
+        });
+
+
+        function closeImageModal() {
+
+            imageModal.classList.remove(
+                "active"
+            );
+
+            imageModal.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
+            imageModalContent.src = "";
+
+        }
+
+
+        imageModalClose.addEventListener(
+            "click",
+            closeImageModal
+        );
+
+
+        imageModal.addEventListener(
+            "click",
+            event => {
+
+                if (
+                    event.target === imageModal
+                ) {
+
+                    closeImageModal();
+
+                }
+
+            }
+        );
+
+
+        document.addEventListener(
+            "keydown",
+            event => {
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    closeImageModal();
+
+                }
+
+            }
+        );
+
+    </script>
+
+
 </body>
+
 </html>
