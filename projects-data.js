@@ -335,7 +335,7 @@ const portfolioProjects = [
             "Eye-Controlled Prosthetic Arm",
 
         category:
-            "PERSONAL PROJECT",
+            "HIGH SCHOOL ENGINEERING PROJECT",
 
         date:
             "December 2023 — April 2024",
@@ -373,7 +373,7 @@ const portfolioProjects = [
             "Elbow-Controlled Prosthetic Arm",
 
         category:
-            "PERSONAL PROJECT",
+            "HIGH SCHOOL ENGINEERING PROJECT",
 
         date:
             "April 2023",

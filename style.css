@@ -2811,55 +2811,49 @@ footer a {
 
 
 /* EDUCATION AREA */
-
 .hero-education {
-
     display: flex;
-
     flex-direction: column;
-
-    gap: 7px;
-
-    padding:
-        24px
-        26px
-        27px;
-
+    gap: 8px;
+    padding: 24px 26px 28px;
 }
 
 
-.hero-education-label {
-
-    color: var(--accent);
-
-    font-size: 0.75rem;
-
-    font-weight: 800;
-
-    letter-spacing: 0.1em;
-
-}
-
-
-.hero-education strong {
-
+/* Main degree — strongest emphasis */
+.hero-degree {
     color: var(--text);
-
-    font-size: 1.3rem;
-
-    line-height: 1.3;
-
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: 0.015em;
+    line-height: 1.25;
 }
 
 
-.hero-graduation {
-
-    color: var(--muted);
-
+/* Minor — also highlighted */
+.hero-minor {
+    color: var(--accent);
     font-size: 1rem;
-
+    font-weight: 700;
+    line-height: 1.35;
 }
 
+
+/* University — slightly smaller */
+.hero-university {
+    margin-top: 8px;
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 650;
+    line-height: 1.35;
+}
+
+
+/* Graduation year */
+.hero-class-year {
+    color: var(--muted);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
 
 
 /* =========================================
@@ -3904,6 +3898,82 @@ footer a {
     .graph-grid,
     .field-graph-grid {
         grid-template-columns: 1fr;
+    }
+
+}
+/* =========================================================
+   F1 DESIGN VISION
+   ========================================================= */
+
+.f1-design-vision-simple {
+    margin: 55px 0 75px;
+}
+
+
+.f1-design-vision-simple h2 {
+    margin: 10px 0 30px;
+
+    color: var(--text);
+
+    font-size: clamp(
+        2.8rem,
+        5vw,
+        4.8rem
+    );
+
+    line-height: 1;
+
+    letter-spacing: -0.05em;
+}
+
+
+.f1-design-target-image-wrap {
+    position: relative;
+
+    overflow: hidden;
+
+    width: 100%;
+
+    background: var(--surface);
+
+    border: 1px solid var(--line);
+
+    border-radius: 22px;
+}
+
+
+.f1-design-target-image {
+    display: block;
+
+    width: 100%;
+
+    max-height: 650px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    cursor: zoom-in;
+}
+
+
+.f1-design-reference-note {
+    margin: 14px 0 0;
+
+    color: var(--muted);
+
+    font-size: 0.85rem;
+
+    font-style: italic;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .f1-design-target-image {
+        max-height: 420px;
     }
 
 }
