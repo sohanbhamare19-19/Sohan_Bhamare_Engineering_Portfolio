@@ -3766,12 +3766,12 @@ footer a {
 
 
 /* ---------------------------------------------------------
-   FINAL 10 HZ SECTION
-   Keep "10 Hz" on ONE line
+   FINAL CONFIGURATION
+   Keep the sampling rate prominent while placing OSR below it.
    --------------------------------------------------------- */
 
 .final-config-layout {
-    grid-template-columns: 260px minmax(0, 1fr);
+    grid-template-columns: 280px minmax(0, 1fr);
     gap: 35px;
     align-items: center;
 }
@@ -3785,10 +3785,31 @@ footer a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    background: var(--surface);
+
+    border: 1px solid var(--line);
+
+    border-radius: 20px;
 }
 
 
-.final-config-stat strong {
+/* Small blue label */
+
+.final-config-stat .final-config-label {
+    color: var(--accent);
+
+    font-size: 0.73rem;
+
+    font-weight: 800;
+
+    letter-spacing: 0.12em;
+}
+
+
+/* Main sampling rate */
+
+.final-config-stat .final-config-rate {
     display: block;
 
     margin-top: 14px;
@@ -3798,12 +3819,33 @@ footer a {
     font-size: clamp(
         3rem,
         5vw,
-        4.5rem
+        4.2rem
     );
 
     line-height: 1;
 
     letter-spacing: -0.04em;
+
+    white-space: nowrap;
+}
+
+
+/* Pressure oversampling setting */
+
+.final-config-stat .final-config-osr {
+    display: block;
+
+    margin-top: 14px;
+
+    color: var(--muted);
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0;
+
+    line-height: 1.3;
 
     white-space: nowrap;
 }
@@ -3889,9 +3931,8 @@ footer a {
 
 
     .final-config-stat {
-        width: fit-content;
-
-        min-width: 230px;
+        width: 100%;
+        max-width: 320px;
     }
 
 
